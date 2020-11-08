@@ -1,4 +1,4 @@
-# ETC - APP -  COMPRA E VENDA DE PASSAGENS AÉREAS
+# EmbraceTheChance ETC-APP -  COMPRA E VENDA DE PASSAGENS AÉREAS
 
 ROTA  - Heroku: https://passagem-app.herokuapp.com/swagger-ui.html
 
