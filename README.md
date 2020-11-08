@@ -1,13 +1,19 @@
-# passagens-api
+# ETC - APP -  COMPRA E VENDA DE PASSAGENS AÉREAS
+
+ROTA  - Heroku: https://passagem-app.herokuapp.com/swagger-ui.html
+ROTA - Azure: https://etc-app.azurewebsites.net/swagger-ui.html (o serviço foi interrompido em virtude da expiração dos dados e eminente cobrança da assinatura, mas houve o deploy que documentamos com videos e fotos)
+
 Metodologia Agil
 
 Inicialmente tivemos uma sprint para definir quais tecnologias seriam necessárias
-para o desenvolvimento da API, desde a definição de banco até as API's de terceiros para consumo.
+para o desenvolvimento da API, desde a definição de banco até as API's de terceiros para consumo e realizamos sprints diários (em virtude do tempo curtíssimo), com reuniões para revisão, acompanhamento e ajustes das tarefas e prazos.
+
+A API foi pensada exautivamente antes de iniciar a sua codificação, erros foram previstos e aplicações possíveis testadas.
 
 Logo após isso estávamos preparados para começar o desenvolvimento.
 
-Decidimos ultilizar o amadeus para recebimento de dados dos voos com itinerários e preços, por quê oferece uma documentação
-robusta sobre como consumir a API 
+Em uma das reunições de pesquisa e estratégias, foi detectado uma aplicação chamada Amadeus que contem dados mundiais de passagens aéreias e é amplamente utilizado no mercado de compra e venda de passagens aéreas e ele fpi utilizado para o recebimento de dados dos voos com itinerários e preços, por quê oferece uma documentação
+robusta sobre como consumir a API.
 
 Foi feito uma rota para que fosse possivel efetuar o login de usuário.
 
@@ -15,7 +21,7 @@ Após iniciar o desenvolvimento da API ocorreram problemas com o grande número 
 
 Foi feito a abstração de informações retornadas no formato JSON, para que fossem utilizadas apenas os atributos pertinentes ao desenvolvimento.
 
-Logo após ser resovildo o problema de abstração dos dados da API amadeus, fomos ao próximo passo, integrar a API de pagamenos, Pagar.me, onde foi feita
+Logo após ser resoLvido o problema de abstração dos dados da API amadeus, fomos ao próximo passo, integrar a API de pagamenos, Pagar.me, onde foi feita
 a autenticação e integração do método de pagamento das consultas efetuadas no Amadeus.
 
 Após isso foi feito o deploy no heroku, pois ocorreram problemas no deploy na Azure, conforme o erro abaixo.
@@ -23,6 +29,9 @@ Após isso foi feito o deploy no heroku, pois ocorreram problemas no deploy na A
 ERRO:Failed to execute goal com.microsoft.azure:azure-webapp-maven-plugin:1.11.0:deploy (default-cli) on project spring-boot:
 This region has quota of 0 PremiumV2 instances for your subscription. Try selecting different region or SKU.
 OnError while emitting onNext value: retrofit2.Response.class -> [Help 1]
+
+
+# INFORMAÇÕES TÉCNICAS PARA CONSUMO DA API ETC
 
 API - Para Gerenciamento de Passagens Aereas
 
