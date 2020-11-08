@@ -1,11 +1,36 @@
 # passagens-api
+Metodologia Agil
+
+Inicialmente tivemos uma sprint para definir quais tecnologias seriam necessárias
+para o desenvolvimento da API, desde a definição de banco até as API's de terceiros para consumo.
+
+Logo após isso estávamos preparados para começar o desenvolvimento.
+
+Decidimos ultilizar o amadeus para recebimento de dados dos voos com itinerários e preços, por quê oferece uma documentação
+robusta sobre como consumir a API 
+
+Foi feito uma rota para que fosse possivel efetuar o login de usuário.
+
+Após iniciar o desenvolvimento da API ocorreram problemas com o grande número de dados que a API do amadeus nos retornava no documento JSON.
+
+Foi feito a abstração de informações retornadas no formato JSON, para que fossem utilizadas apenas os atributos pertinentes ao desenvolvimento.
+
+Logo após ser resovildo o problema de abstração dos dados da API amadeus, fomos ao próximo passo, integrar a API de pagamenos, Pagar.me, onde foi feita
+a autenticação e integração do método de pagamento das consultas efetuadas no Amadeus.
+
+Após isso foi feito o deploy no heroku, pois ocorreram problemas no deploy na Azure, conforme o erro abaixo.
+
+ERRO:Failed to execute goal com.microsoft.azure:azure-webapp-maven-plugin:1.11.0:deploy (default-cli) on project spring-boot:
+This region has quota of 0 PremiumV2 instances for your subscription. Try selecting different region or SKU.
+OnError while emitting onNext value: retrofit2.Response.class -> [Help 1]
+
 API - Para Gerenciamento de Passagens Aereas
 
 Ao iniciar  a aplicação pela classe PassagensApiApplication sera realizada a criação das tabelas de dominio
-e a inclusão de 2 perfis de acesso ADIM e USER, além da inclusão do Usuário MASTER (admin:admin).
+e a inclusão de 2 perfis de acesso ADMIN e USER, além da inclusão do Usuário MASTER (admin:admin).
 
 
-Voce pode validar a autenticação do usuaário MASTER atraves da documentação: {HOST}:{PORTA}/swagger-ui.html
+Você pode validar a autenticação do usuário MASTER através da documentação: https://passagem-app.herokuapp.com/swagger-ui.html#
 
 POST: http://{HOST}:{PORTA}/login
 {
@@ -21,10 +46,10 @@ Response:
   "userId": 1
 }
 
-Se preferir está disponível a inclusão dos viajantes (clientes) ou consulta dos voos pela API
+Se preferir está disponível a inclusão dos viajantes (clientes) ou consulta dos voos pela API.
 
 VOSS
- 
+
 POST: http://{HOST}:{PORTA}/flights
 {
 	"originLocationCode" : "NYC",
@@ -95,9 +120,9 @@ Response:
 	...
 	]
 
-Além da resposta é armezado dados relevantes em nossa base de dados como id, preco e data da reserva.
+Além da resposta é armezado dados relevantes em nossa base de dados como id, preço e data da reserva.
 
-A partir agora para consultar as reservas é necessário realizar o login como ADMIN ou Viajante acessando a url de login para obter o token
+A partir agora, para consultar as reservas é necessário realizar o login como ADMIN ou Viajante acessando a url de login para obter o token
 
 GET: http://{HOST}:{PORTA}/reservas
 
