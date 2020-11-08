@@ -105,9 +105,7 @@ Response:
       "lastTicketingDate": "2020-11-06",
       "numberOfBookableSeats": 3,
       "itineraries": [
-	  
-	  ...
-]
+	  ... ]
 
 
 Para prosseguir na iteração da API é necessário realizar o cadastro do viajante:
