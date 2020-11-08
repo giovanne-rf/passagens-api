@@ -1,10 +1,31 @@
 # ETC - APP -  COMPRA E VENDA DE PASSAGENS AÉREAS
 
 ROTA  - Heroku: https://passagem-app.herokuapp.com/swagger-ui.html
+
 ROTA - Azure: https://etc-app.azurewebsites.net/swagger-ui.html (o serviço foi interrompido em virtude da expiração dos dados e eminente cobrança da assinatura, mas houve o deploy que documentamos com videos e fotos)
 
-Metodologia Agil
 
+# O Projeto:
+A problemática apresentada requeria uma solução ampla e segura para servir ao usuário consumidor de compra de passagens aéreas via API desenvolvida em Java - Spring boot -  a ser consumida via protocolo HTML (inicialmente).
+
+# A API desenvolvida fornece ao usuário uma experiencia completa para reserva e compra de passagens aéreas em uma amplíssima rede de aeroportos e companhias aéreas através dos serviços da API Amadeus, lider de mercado no seguimento, com segurança (Spring Security), eficiência e rapidez.
+
+Foram levados em consideração critérios de:
+
+Performance (aplicado)
+
+Alta Disponibilidade (aplicado)
+
+Testes Automatizados (aplicado)
+
+Segurança (proteger chamadas diretas a API sem ser via front-end) (aplicado) e 
+
+Logs/Rastreabilidade (aplicado)
+
+Todas a funcionalidades obrigatórias foram contempladas no projeto de forma satisfatória.
+
+
+# Metodologia Agil
 Inicialmente tivemos uma sprint para definir quais tecnologias seriam necessárias
 para o desenvolvimento da API, desde a definição de banco até as API's de terceiros para consumo e realizamos sprints diários (em virtude do tempo curtíssimo), com reuniões para revisão, acompanhamento e ajustes das tarefas e prazos.
 
@@ -196,6 +217,8 @@ Response:
 }
 
 NOTA: Se houve a confirmação do pagamento o status da reserva estará como PG (Pago) e o id do pagamento de api de pagamentos.
+
+# Por fim, gostariamos de agradecer à dedicação dos professores Marcos e Gleyson que de forma brilhante foram pacientes, competentes e companheiros nessa jornada. Obrigado, professores!
 
 
 
